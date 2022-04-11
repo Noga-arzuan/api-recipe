@@ -12,8 +12,8 @@ class Home extends React.Component {
     this.state=({value:"",data:[]})
   }
    handleOnClick = async() => {
-    const APP_ID = "01b159db";
-      const API_KEY = " 661a4d9495d5b5915081d2aadf4d2386";
+    const APP_ID = "";
+      const API_KEY = " ";
       
     const fetchData = await axios.get( `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${this.state.value}`);
     this.setState({ data: fetchData.data.hits});
